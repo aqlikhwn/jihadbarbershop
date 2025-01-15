@@ -1,0 +1,84 @@
+{
+    "header": {
+        "brand": "Jihad Barbershop",
+        "links": [
+            { "text": "Home", "href": "#home" },
+            { "text": "About Us", "href": "#about" },
+            { "text": "Services", "href": "#services" },
+            { "text": "Contact Us", "href": "#contact" },
+            { "text": "Location", "href": "#location" },
+            { "text": "Login", "href": "login.html", "class": "login-btn" },
+            { "text": "More", "href": "#more" }
+        ]
+    },
+    "hero": {
+        "title": "We Make You Handsome",
+        "description": "Discover hairstyles that suit you best!",
+        "buttons": [
+            { "text": "Explore More", "link": "#explore" },
+            { "text": "Watch Video", "link": "#video" }
+        ]
+    },
+    "services": [
+        {
+            "title": "Hair Styling",
+            "description": "Trendy and professional haircuts tailored to you.",
+            "price": "$49",
+            "image": "hair_styling.jpg"
+        },
+        {
+            "title": "Beard Grooming",
+            "description": "Keep your beard sharp and clean.",
+            "price": "$39",
+            "image": "beard_grooming.jpg"
+        },
+        {
+            "title": "Facial Treatment",
+            "description": "Rejuvenate your skin with our special treatments.",
+            "price": "$59",
+            "image": "facial_treatment.jpg"
+        },
+        {
+            "title": "Hair Treatment",
+            "price": "$40 - 30 minutes",
+            "button": "Book Now"
+        },
+        {
+            "title": "Beard Trimming",
+            "price": "$40 - 30 minutes",
+            "button": "Book Now"
+        },
+        {
+            "title": "Hair Cut",
+            "price": "$40 - 30 minutes",
+            "button": "Book Now"
+        },
+        {
+            "title": "Mouth Wash",
+            "price": "$40 - 30 minutes",
+            "button": "Book Now"
+        },
+        {
+            "title": "Hair Wash",
+            "price": "$40 - 30 minutes",
+            "button": "Book Now"
+        },
+        {
+            "title": "Facial & Wash",
+            "price": "$40 - 30 minutes",
+            "button": "Book Now"
+        },
+        {
+            "title": "Hair Color",
+            "price": "$40 - 30 minutes",
+            "button": "Book Now"
+        },
+        {
+            "title": "Clean Shave",
+            "price": "$40 - 30 minutes",
+            "button": "Book Now"
+        }
+    ]
+
+    
+}
