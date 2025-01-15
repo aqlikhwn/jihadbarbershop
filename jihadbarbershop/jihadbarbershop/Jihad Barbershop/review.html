@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <title>Review - Jihad Barbershop</title>
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <header>
+        <nav>
+                <a href="index.html">Home</a>
+                <a href="About Us.html">About Us</a>
+                <a href="Booking.html">Services</a>
+                <a class="logo">
+                    <img src="logo.png" alt="Jihad Barbershop Logo">
+                </a>
+                <a href="location.html">Location</a>
+                <a href="Contact Us.html">Contact Us</a>
+                <a href="Login.html">Log In</a>
+        </nav>
+    </header>
+
+    <main>
+        <img src="Booking.png" alt="Jihad Barbershop Barber" class="booking-image"> 
+        <h1 class="title">Review & Confirm</h1>
+        <div class="review-container">
+            <div class="payment-section">
+                <h2>Payment Method</h2>
+                <button class="payment-btn" id="payVenue">Pay At Venue</button>
+                <button class="payment-btn" id="onlineBanking">Online Banking</button>
+
+                <h2>Booking Notes</h2>
+                <textarea placeholder="Include comments or requests about your booking"></textarea>
+            </div>
+
+            <div class="summary-section">
+                <h3>Summary</h3>
+                <hr>
+                <p><strong>Date:</strong> <span id="summaryDate">Loading...</span></p>
+                <p><strong>Time:</strong> <span id="summaryTime">Loading...</span></p>
+                <p><strong>Service:</strong> <span id="summaryService">Loading...</span></p>
+                <p><strong>Barber:</strong> <span id="summaryBarber">Loading...</span></p>
+                <hr>
+                <p><strong>Total:</strong> <span id="summaryPrice">0</span></p>
+            </div>
+        </div>
+
+        <!-- Popup -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p id="popupMessage"></p>
+                <button class="close-btn" id="closePopup">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2024 Jihad Barbershop. All Rights Reserved.
+    </footer>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve elements
+            const payVenueButton = document.getElementById("payVenue");
+            const onlineBankingButton = document.getElementById("onlineBanking");
+            const popup = document.getElementById("popup");
+            const popupMessage = document.getElementById("popupMessage");
+            const closePopup = document.getElementById("closePopup");
+
+            // Populate summary from localStorage
+            const selectedService = localStorage.getItem("service") || "Not selected";
+            const selectedBarber = localStorage.getItem("barber") || "Not selected";
+            const selectedDate = localStorage.getItem("datetimeDate") || "Not selected";
+            const selectedTime = localStorage.getItem("datetimeTime") || "Not selected";
+            const selectedPrice = localStorage.getItem("price") || "0";
+
+            document.getElementById("summaryService").textContent = selectedService;
+            document.getElementById("summaryBarber").textContent = selectedBarber;
+            document.getElementById("summaryDate").textContent = selectedDate;
+            document.getElementById("summaryTime").textContent = selectedTime;
+            document.getElementById("summaryPrice").textContent = selectedPrice;
+
+            // Function to show popup with a custom message
+            function showPopup(message) {
+                popupMessage.textContent = message;
+                popup.style.display = "flex";
+            }
+
+            // Event listeners for payment buttons
+            payVenueButton.addEventListener("click", () => {
+                showPopup("You will pay at the venue.");
+            });
+
+            onlineBankingButton.addEventListener("click", () => {
+                showPopup("You have chosen online banking.");
+            });
+
+            // Close the popup
+            closePopup.addEventListener("click", () => {
+                popup.style.display = "none";
+            });
+
+            // Close the popup when clicking outside of it
+            popup.addEventListener("click", (e) => {
+                if (e.target === popup) {
+                    popup.style.display = "none";
+                }
+            });
+        });
+      
+    </script>
+     <script>
+        // Redirect for Login button
+        document.querySelector('.login-btn').addEventListener('click', () => {
+            location.href = 'login.html';
+        });
+
+        // Redirect for Location button
+        document.querySelector('.Location-btn').addEventListener('click', () => {
+            location.href = 'location.html';
+        });
+
+        // Redirect for About Us button
+        document.querySelector('.Aboutus-btn').addEventListener('click', () => {
+            location.href = 'aboutus.html';
+        });
+
+        // Redirect for Contact Us button
+        document.querySelector('.contactus-btn').addEventListener('click', () => {
+            location.href = 'contactus.html';
+        });
+        document.querySelector('.Mainpage-btn').addEventListener('click', () => {
+            location.href = 'Mainpage.html';
+        });
+    </script>
+    
+</body>
+</html>
